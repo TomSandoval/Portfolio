@@ -56,8 +56,7 @@ function Nav() {
           </div>
         ) : null}
       </nav>
-      {menu ? (
-        <div className={style.containerMenu}>
+        <div className={menu ? style.containerMenuActive : style.containerMenu}>
           <ul className={style.movilListMenu}>
             <li>
               <img
@@ -85,7 +84,6 @@ function Nav() {
             </li>
           </ul>
         </div>
-      ) : null}
     </>
   );
 }
