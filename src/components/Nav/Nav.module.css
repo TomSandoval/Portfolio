@@ -43,6 +43,15 @@
     background-color: rgb(26, 89, 160);
 }
 
+.containerMenu {
+    transition: all .5s;
+    margin: 0;
+    width: 50%;
+    height: 140px;
+    background: rgb(37,179,233);
+    background: linear-gradient(90deg, rgba(37,179,233,1) 0%, rgba(37,102,233,1)100%);
+    transform: translateX(-100%);
+}
 
 @font-face {
     font-family: "CormorantSC";
@@ -102,15 +111,6 @@
       .movilButtonOpen .burgerMenuLine:nth-child(3) {
         transform: rotate(-45deg) translate(3px, -4px);
       }
-    .containerMenu {
-        transition: all .5s;
-        margin: 0;
-        width: 50%;
-        height: 140px;
-        background: rgb(37,179,233);
-        background: linear-gradient(90deg, rgba(37,179,233,1) 0%, rgba(37,102,233,1)100%);
-        transform: translateX(-100%);
-    }
 
     .containerMenuActive {
         transition: all .5s;
