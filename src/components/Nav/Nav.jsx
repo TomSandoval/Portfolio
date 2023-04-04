@@ -43,7 +43,7 @@ function Nav() {
             Contact Me
           </Link>
         </ul>
-        {anchoPantalla <= 730 ? (
+        {anchoPantalla <= 800 ? (
           <div>
             <button
               className={menu ? style.movilButtonOpen : style.movilButton}

@@ -9,6 +9,8 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+    position: relative;
+    top: calc(60px);
 }
 
 .welcome {
@@ -41,6 +43,8 @@
 
 .welcomeImage {
     width: 600px;
+    position: relative;
+    z-index: 10;
 }
 
 .skew {
@@ -74,12 +78,16 @@
 
 
 @media only screen and (max-width: 800px) {
+    
+    .article {
+        top: 50px;
+    }
+
     .welcomeImage {
         width: 240px;
     }
 
     .welcome {
-        
         flex-direction: column;
         height: 400px;
     }
