@@ -45,7 +45,7 @@
 
 .skew {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     width: 100%;
     height: 100px;
     clip-path: polygon(100% 0, 0% 100%, 100% 100%);
