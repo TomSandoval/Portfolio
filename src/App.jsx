@@ -1,15 +1,15 @@
-import { useState } from 'react'
+import Home from './components/home/home'
 import Nav from './components/Nav/Nav'
 import './App.css'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, Navigate } from 'react-router-dom'
+import { useEffect } from 'react'
 
 function App() {
-
   return (
     <>
     <Nav/>
     <Routes>
-      <Route path='/home'/>
+      <Route path='/' element= {<Home></Home>}/>
       <Route path='/about'/>
       <Route path='/portfolio'/>
       <Route path='/contact'/>

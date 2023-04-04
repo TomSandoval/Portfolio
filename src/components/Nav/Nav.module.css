@@ -43,14 +43,24 @@
     background-color: rgb(26, 89, 160);
 }
 
+.subtitle {
+    background-color: #bcc2dd;
+    text-align: center;
+    width: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: lighter;
+}
+
 .containerMenu {
     transition: all .5s;
     margin: 0;
     width: 50%;
-    height: 140px;
+    height: 100vh;
     background: rgb(37,179,233);
     background: linear-gradient(90deg, rgba(37,179,233,1) 0%, rgba(37,102,233,1)100%);
     transform: translateX(-100%);
+    position: absolute;
+    z-index: 1000;
 }
 
 @font-face {
@@ -116,9 +126,11 @@
         transition: all .5s;
         margin: 0;
         width: 50%;
-        height: 140px;
+        height: 100vh;
         background: rgb(37,179,233);
         background: linear-gradient(90deg, rgba(37,179,233,1) 0%, rgba(37,102,233,1)100%);
+        position: absolute;
+        z-index: 1000;
     }
     
     .movilListMenu {
@@ -128,7 +140,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
-        height: 100%;
+        height: 50%;
     }
 
     .movilListMenu li {

@@ -27,9 +27,9 @@ function Nav() {
   }, []);
 
   return (
-    <>
+    <div style={{position: "relative"}}>
       <nav className={style.nav}>
-        <Link to="/home" className={style.logoLink}>
+        <Link to="/" className={style.logoLink}>
           <h2 className={style.logo}>Tomás Sandoval</h2>
         </Link>
         <ul className={style.list}>
@@ -56,6 +56,7 @@ function Nav() {
           </div>
         ) : null}
       </nav>
+      <h3 className={style.subtitle}>Tomás Sandoval • Full-Stack Developer</h3>
         <div className={menu ? style.containerMenuActive : style.containerMenu}>
           <ul className={style.movilListMenu}>
             <li>
@@ -84,7 +85,7 @@ function Nav() {
             </li>
           </ul>
         </div>
-    </>
+    </div>
   );
 }
 

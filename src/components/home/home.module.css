@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.article {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome {
+    width: inherit;
+    height: 550px;
+    background: linear-gradient(-45deg, #310e92,#25b3e9,#25e9c9,#25d7e9 );
+    background-size: 400% 400%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: back 10s ease infinite;
+    padding: 30px;
+}
+
+.welcomeContain {
+    width: 20%;
+}
+
+.welcomeTitle {
+    color: #fff;
+    font-family: "Candal";
+    font-size: 3em;
+    letter-spacing: 2px;
+}
+
+.welcomeSubtitle {
+    color: #8f8d8d;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.welcomeImage {
+    width: 600px;
+}
+
+.skew {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 140px;
+    clip-path: polygon(100% 50%, 0 100%, 100% 100%);
+    background-color: #fff;
+}
+
+
+@keyframes back {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;    
+    }
+    100% {
+        background-position: 0% 50%;    
+    }
+}
+
+
+
+@font-face {
+    font-family: "Candal";
+    src: url(../../Fonts/Candal-Regular.ttf);
+}
+
+
+@media only screen and (max-width: 730px) {
+    .welcomeImage {
+        width: 240px;
+    }
+
+    .welcome {
+        padding: 8px;
+        flex-direction: column;
+        height: 400px;
+    }
+
+    .skew {
+        clip-path: polygon(100% 70%, 0 100%, 100% 100%);
+    }
+
+    .welcomeContain {
+        width: 40%;
+        text-align: center;
+    }
+
+    .welcomeTitle {
+        font-size: 1.3em;
+        margin-bottom: 8px;
+    }
+}
