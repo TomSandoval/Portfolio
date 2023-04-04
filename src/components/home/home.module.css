@@ -21,7 +21,6 @@
     align-items: center;
     position: relative;
     animation: back 10s ease infinite;
-    padding: 30px;
 }
 
 .welcomeContain {
@@ -80,7 +79,7 @@
     }
 
     .welcome {
-        padding: 8px;
+        
         flex-direction: column;
         height: 400px;
     }
