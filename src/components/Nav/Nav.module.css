@@ -1,6 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    padding: 0;
 }
 .nav {
     height: 60px;
@@ -49,6 +50,8 @@
     width: 100%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: lighter;
+    display: flex;
+    justify-content: center;
 }
 
 .containerMenu {
