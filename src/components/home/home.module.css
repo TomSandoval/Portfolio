@@ -86,7 +86,6 @@
 
     .skew {
         clip-path: polygon(100% 70%, 0 100%, 100% 100%);
-        border-bottom: 80px solid #fff ;
     }
 
     .welcomeContain {
