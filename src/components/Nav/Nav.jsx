@@ -27,10 +27,10 @@ function Nav() {
   }, []);
 
   return (
-    <div style={{position: "relative"}}>
+    <header style={{position: "relative"}}>
       <nav className={style.nav}>
         <Link to="/" className={style.logoLink}>
-          <h2 className={style.logo}>Sandoval</h2>
+          <h2 className={style.logo}>Tomás Sandoval</h2>
         </Link>
         <ul className={style.list}>
           <Link to="/about" className={style.linkList}>
@@ -85,7 +85,7 @@ function Nav() {
             </li>
           </ul>
         </div>
-    </div>
+    </header>
   );
 }
 

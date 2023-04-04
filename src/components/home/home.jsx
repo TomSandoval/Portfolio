@@ -7,7 +7,7 @@ function Home (props){
         <article className={style.article}>
             <section className={style.welcome}><div className={style.welcomeContain}><h1 className={style.welcomeTitle}>Hi.<br/>I am Tomás</h1><p className={style.welcomeSubtitle}>Full Stack Web Developer</p></div>
             <img src={image} alt="" className={style.welcomeImage}/><div className={style.skew}></div></section>
-            <section style={{width: "100vw", height: "400px", background: "#fff"}}></section>
+            <section> </section>
             <section></section>
         </article>
     )

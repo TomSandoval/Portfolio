@@ -5,14 +5,14 @@
 }
 
 .article {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 .welcome {
-    width: inherit;
+    max-width: 100%;
     height: 550px;
     background: linear-gradient(-45deg, #310e92,#25b3e9,#25e9c9,#25d7e9 );
     background-size: 400% 400%;
@@ -47,8 +47,8 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 140px;
-    clip-path: polygon(100% 50%, 0 100%, 100% 100%);
+    height: 100px;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
     background-color: #fff;
 }
 
@@ -73,7 +73,7 @@
 }
 
 
-@media only screen and (max-width: 730px) {
+@media only screen and (max-width: 800px) {
     .welcomeImage {
         width: 240px;
     }
