@@ -27,7 +27,7 @@ function Nav() {
   }, []);
 
   return (
-    <header style={{position: "relative"}}>
+    <header className={style.header}>
       <nav className={style.nav}>
         <Link to="/" className={style.logoLink}>
           <h2 className={style.logo}>Tomás Sandoval</h2>

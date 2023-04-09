@@ -16,13 +16,12 @@
 .welcome {
     max-width: 100%;
     height: 550px;
-    background: linear-gradient(-45deg, #310e92,#25b3e9,#25e9c9,#25d7e9 );
-    background-size: 400% 400%;
+    background: rgb(37,179,233);
+    background: linear-gradient(90deg, #25b3e9 0%, #310e92 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    animation: back 10s ease infinite;
 }
 
 .welcomeContain {
@@ -37,24 +36,19 @@
 }
 
 .welcomeSubtitle {
-    color: #8f8d8d;
+    color: #C2C2C2;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.welcomeImage {
-    width: 600px;
-    position: relative;
-    z-index: 10;
+.imageContainer {
+    display: flex;
+    max-width: 600px;
 }
 
-.skew {
-    position: absolute;
-    bottom: -1px;
-    width: 100%;
-    height: 100px;
-    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-    background-color: #fff;
+.welcomeImage {
+    max-width: 100%;
 }
+
 
 
 @keyframes back {
@@ -71,10 +65,6 @@
 
 
 
-@font-face {
-    font-family: "Candal";
-    src: url(../../Fonts/Candal-Regular.ttf);
-}
 
 
 @media only screen and (max-width: 800px) {
@@ -83,13 +73,13 @@
         top: 50px;
     }
 
-    .welcomeImage {
-        width: 300px;
-    }
-
     .welcome {
         flex-direction: column;
         height: 400px;
+    }
+
+    .imageContainer{
+        max-width: 400px;
     }
 
     .skew {
@@ -105,4 +95,10 @@
         font-size: 1.3em;
         margin-bottom: 8px;
     }
+}
+
+
+@font-face {
+    font-family: "Candal";
+    src: url(../../Fonts/Candal-Regular.ttf);
 }

@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 100vw;
+    height: 512px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    gap: 3em;
+}
+
+.title {
+    text-align: center;
+    font-family: "Candal";
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+.paragraph {
+    width: 650px;
+    text-align: center;
+    font-family: "Sansation";
+    font-size: 24px;
+}
+
+.imageContainer {
+    height: 100%;
+    width: 506px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    width: 378px;
+    height: 378px;
+    border-radius: 200%;
+    border: 2px solid #000000;
+    background-color: #D7DBFF;
+}
+
+.skew {
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    height: 100px;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    background-color: #fff;
+}
+
+
+@media only screen and (max-width: 800px) {
+    
+    .container {
+        flex-direction: column;
+        gap: 1em;
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .paragraph {
+        font-size: 18px;
+        width: 80%;
+    }
+
+    .textContainer {
+        gap: 15px;
+        width: 100%;
+    }
+
+    .image {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+
+
+@font-face {
+    font-family: "Candal";
+    src: url(../../Fonts/Candal-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Sansation";
+    src: url(../../Fonts/Sansation_Light.ttf);
+}
