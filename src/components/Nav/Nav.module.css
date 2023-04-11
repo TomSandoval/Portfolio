@@ -1,3 +1,7 @@
+body {
+    scroll-behavior: smooth;
+}
+
 .nav {
     height: 60px;
     width: 100vw;
@@ -113,7 +117,7 @@
     }
 
     .listContainer {
-        height: 160px;
+        height: 460px;
         display: flex;
         justify-content: center;
         align-items: center;
