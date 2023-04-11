@@ -21,7 +21,7 @@ function Home() {
       </section>
       <section className={styleAbout.container}>
         <div className={styleAbout.textContainer}>
-          <h3 className={styleAbout.titleAbout}>About</h3>
+          <h3 className={styleAbout.titleAbout}>About Me</h3>
           <p className={styleAbout.paragraph}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim

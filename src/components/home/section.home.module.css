@@ -25,7 +25,7 @@
 
 .paragraph {
     width: 650px;
-    text-align: center;
+    text-align: start;
     font-family: "Sansation";
     font-size: 24px;
 }
@@ -73,6 +73,7 @@
         font-size: 18px;
         width: 80%;
         min-width: 360px;
+        text-align: start;
     }
 
     .imageContainer {
