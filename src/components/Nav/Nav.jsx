@@ -40,7 +40,8 @@ function Nav() {
     };
   }, []);
 
-  function toggleMenu() {
+  function toggleMenu(e) {
+    e.stopPropagation(); // Evitar propagación del evento al documento
     setMenu(!menu);
   }
 
