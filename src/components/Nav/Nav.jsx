@@ -1,10 +1,12 @@
 import style from "./Nav.module.css";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 function Nav() {
   const [anchoPantalla, setAnchoPantalla] = useState(window.innerWidth);
   const [menu, setMenu] = useState(false);
+  const divMenu = useRef(null);
+  const buttonActive = useRef(null);
 
   useEffect(() => {
     function actualizarAnchoPantalla() {
@@ -13,8 +15,28 @@ function Nav() {
 
     window.addEventListener("resize", actualizarAnchoPantalla);
 
-    () => {
+    return () => {
       window.removeEventListener("resize", actualizarAnchoPantalla);
+    };
+  }, []);
+
+  useEffect(() => {
+    function handleDocumentClick(e) {
+      if (
+        divMenu.current &&
+        buttonActive.current &&
+        divMenu.current.className.includes("containerMenuActive") &&
+        e.target !== divMenu.current &&
+        e.target !== buttonActive.current
+      ) {
+        setMenu(false);
+      }
+    }
+
+    document.addEventListener("click", handleDocumentClick);
+
+    return () => {
+      document.removeEventListener("click", handleDocumentClick);
     };
   }, []);
 
@@ -22,14 +44,6 @@ function Nav() {
     setMenu(!menu);
   }
 
-  function handleDocument(e) {
-    if (e.target.classList.value.includes("containerMenuActive") == false) {
-      if (e.target.classList.value.includes("Button")) return;
-      setMenu(false);
-    }
-  }
-
-  document.addEventListener("click", handleDocument);
 
   return (
     <>
@@ -53,6 +67,7 @@ function Nav() {
             <button
               className={menu ? style.movilButtonOpen : style.movilButton}
               onClick={toggleMenu}
+              ref={buttonActive}
             >
               <span className={style.burgerMenuLine}></span>
               <span className={style.burgerMenuLine}></span>
@@ -64,6 +79,7 @@ function Nav() {
       <h3 className={style.subtitle}>Tomás Sandoval • Full-Stack Developer</h3>
       <div
         id="menu"
+        ref={divMenu}
         className={menu ? style.containerMenuActive : style.containerMenu}
       >
         <div className={style.listContainer}>
