@@ -4,14 +4,18 @@
     box-sizing: border-box;
 }
 
+
 .article {
     width: 100vw;
-    height: 100vh;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
     top: calc(60px);
 }
+
+
+
 
 .welcome {
     width: 100vw;
@@ -36,6 +40,7 @@
 }
 
 .welcomeSubtitle {
+    text-align: center;
     color: #C2C2C2;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -43,6 +48,7 @@
 .imageContainer {
     display: flex;
     max-width: 600px;
+    align-self: flex-start;
 }
 
 .welcomeImage {
@@ -89,6 +95,7 @@
 
     .imageContainer{
         max-width: 400px;
+        align-self: center;
     }
 
     .skew {

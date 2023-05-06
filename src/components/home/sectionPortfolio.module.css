@@ -1,13 +1,16 @@
 .container {
     width: 100vw;
     max-width: 100%;
-    height: 512px;
-    background-color: #fff;
+    height: 612px;
+    background-color: #D7DBFF;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
     position: relative;
 }
+
+
 
 .textContainer {
     display: flex;
@@ -44,13 +47,14 @@
     height: 390px;
     object-fit: cover;
     border-radius: 200%;
+    background-color: #fff;
     border: 2px solid #000000;
 }
 
 .aboutButton {
     background: none;
     border: none;
-    background-color: #D7DBFF;
+    background-color: #fff;
     padding: 14px 8px;
     border-radius: 20px;
     font-family: 'Candal';
@@ -62,18 +66,38 @@
 }
 
 .aboutButton:hover{
-    background-color: #b3b6d6;
+    background-color: #eee;
 }
 
+.skew {
+    width: 100vw;
+    max-width: 100%;
+    height: 100px;
+    top: -1px;
+    position: absolute;
+    background:#ffffff;
+    bottom: 0px;
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
+}
 
+.skew2 {
+    width: 100vw;
+    max-width: 100%;
+    height: 100px;
+    bottom: 0;
+    position: absolute;
+    background:#ffffff;
+    bottom: 0px;
+    clip-path: polygon(100% 100%, 0% 100%, 100% 0);
+}
 
 @media only screen and (max-width: 800px) {
     
     .container {
         flex-direction: column-reverse;
-        gap: 1em;
         justify-content: center;
         margin-top: 3.2em;
+        height: 712px;
     }
 
     .titleAbout {
@@ -89,6 +113,7 @@
 
     .imageContainer {
         max-width: 80%;
+        height: 40%;
     }
 
     .textContainer {
@@ -99,6 +124,12 @@
     .image {
         width: 250px;
         height: 250px;
+    }
+    .skew{
+        height: 30px;
+    }
+    .skew2{
+        height: 30px;
     }
 }
 
