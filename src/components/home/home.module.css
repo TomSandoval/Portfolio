@@ -4,18 +4,13 @@
     box-sizing: border-box;
 }
 
-
-body {
-    overflow-x: hidden;
-}
-
 .article {
     width: 100vw;
     max-width: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
-    top: calc(60px);
+    overflow-x: hidden;
 }
 
 
