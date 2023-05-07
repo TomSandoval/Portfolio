@@ -1,9 +1,17 @@
 import style from "./section.home.module.css";
 import aboutImage from "../../assets/Tomas illustration.png";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 function SectionAbout() {
+
+  useEffect(()=>{
+    Aos.init({duration: 1000})
+  },[])
+
   return (
-    <section className={style.container}>
+    <section className={style.container} data-aos='fade-left'>
     <div className={style.textContainer}>
       <h3 className={style.titleAbout}>About Me</h3>
       <p className={style.paragraph}>

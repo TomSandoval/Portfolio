@@ -5,6 +5,10 @@
 }
 
 
+body {
+    overflow-x: hidden;
+}
+
 .article {
     width: 100vw;
     max-width: 100%;

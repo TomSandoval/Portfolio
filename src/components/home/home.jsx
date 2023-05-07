@@ -2,6 +2,7 @@ import style from "./home.module.css";
 import image from "../../assets/welcome2.png";
 import SectionAbout from "./section.about";
 import SectionPortfolio from "./sectionPortfolio";
+import SectionContact from "./contactSection";
 
 function Home() {
   return (
@@ -21,6 +22,7 @@ function Home() {
       </section>
       <SectionAbout/>
       <SectionPortfolio/>
+      <SectionContact/>
     </article>
   );
 }
