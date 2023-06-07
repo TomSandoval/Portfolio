@@ -1,5 +1,5 @@
 import style from './sectionPortfolio.module.css'
-import image from '../../assets/Portfolio fixed.png'
+import image from '../../assets/DisenioPortfolio.png'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';

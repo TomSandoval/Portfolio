@@ -1,5 +1,5 @@
 import style from "./section.home.module.css";
-import aboutImage from "../../assets/Tomas illustration.png";
+import aboutImage from "../../assets/Mesa de trabajo 1.png";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';

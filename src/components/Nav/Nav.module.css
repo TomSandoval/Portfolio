@@ -6,7 +6,6 @@ body {
     height: 60px;
     width: 100vw;
     max-width: 100%;
-    background: rgb(37,179,233);
     background: linear-gradient(90deg, #25b3e9 0%, #310e92 100%);
     display: flex;
     align-items: center;

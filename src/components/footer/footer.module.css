@@ -1,0 +1,97 @@
+.footer {
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 140px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: linear-gradient(90deg, #25b3e9 0%, #310e92 100%);
+}
+
+
+.footer h3 {
+    font-family: 'CormorantSC';
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 2em;
+    text-align: center;
+}
+
+.leftContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftContainer h5 {
+    color: #fff;
+    font-family: 'CormorantSC';
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.leftContainer ul {
+    list-style: none;
+    color: #eee ;
+    
+}
+
+.leftContainer ul li {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+.rightContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+}
+
+@media only screen and (max-width: 800px) {
+    .footer {
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        gap: 3em;
+    }
+
+    .leftContainer {
+        margin-bottom: 20px;
+        max-width: 140px;
+        display: none;
+    }
+    
+    .leftContainer ul li {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .footer h3 {
+        font-size: 22px;
+    }
+
+    .rightContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .leftContainer ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+    
+
+
+@font-face {
+    font-family: "CormorantSC";
+    src: url("../../Fonts/CormorantSC-Light.ttf");
+}

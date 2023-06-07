@@ -3,9 +3,11 @@ import image from "../../assets/welcome2.png";
 import SectionAbout from "./section.about";
 import SectionPortfolio from "./sectionPortfolio";
 import SectionContact from "./contactSection";
+import Footer from "../footer/footer";
 
 function Home() {
   return (
+    <>
     <article className={style.article}>
       <section className={style.welcome}>
         <div className={style.welcomeContain}>
@@ -24,6 +26,8 @@ function Home() {
       <SectionPortfolio/>
       <SectionContact/>
     </article>
+    <Footer/>
+    </>
   );
 }
 
