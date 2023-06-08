@@ -1,0 +1,15 @@
+.avatar-chat {
+    max-width: 90px;
+    align-self: flex-end;
+}
+
+.chatbot-container {
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px 0 0 0;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
