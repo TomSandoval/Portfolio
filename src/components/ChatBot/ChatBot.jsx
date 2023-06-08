@@ -17,6 +17,7 @@ function Bot() {
     return (
         <div className="chatbot-container">
             {showChat && <ChatBot
+                botAvatar={Avatar}
                 headerTitle="ChatBot"
                 steps={[
                     {
