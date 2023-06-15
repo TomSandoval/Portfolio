@@ -354,6 +354,7 @@
     .skills-content{
         flex-direction: row;
         overflow-x: auto;
+        overflow-y: hidden;
         gap: 16px;
         padding: 12px;
     }
@@ -363,7 +364,7 @@
 
     .skill-container {
        flex-direction: column;
-       width: 1200px;
+       min-width: 130px;
     }
 
     .skill-img {
