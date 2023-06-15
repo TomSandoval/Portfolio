@@ -1,6 +1,9 @@
 .avatar-chat {
     max-width: 90px;
     align-self: flex-end;
+    border: 1px solid #252525;
+    border-radius: 3em;
+    background-color: #ddd5;
 }
 
 .chatbot-container {

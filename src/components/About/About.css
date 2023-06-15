@@ -1,0 +1,336 @@
+.about-container {
+    position: relative;
+    width: 100vw;
+    padding: 30px;
+    top: 60px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    min-height: calc(100vh - 82px);
+}
+
+
+.about-content {
+    border: 1px solid #eee;
+    margin-left: auto;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 2px;
+    grid-row-gap: 0px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.34);
+    max-height: 810px;
+    max-width: 1200px;
+}
+
+.img-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+}
+
+.me-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    object-fit: cover;
+    animation: bubble 8s ease-in-out infinite;
+    margin-bottom: 10px;
+}
+
+.about-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-title {
+    font-size: 2em;
+    letter-spacing: 1px;
+    text-align: center;
+    font-family: "Candal";
+}
+
+.option {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.about-subtitle {
+    font-family: "Candal";
+    font-size: 1.2em;
+    margin-bottom: 18px;
+    align-self: flex-start;
+    background-color: transparent;
+    border: none;
+    color: #000;
+    padding: 6px 12px;
+    border-radius: 2em;
+    cursor: pointer;
+}
+
+.about-subtitle::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width .4s;
+}
+
+.about-subtitle:hover::after {
+    width: 100%;
+}
+
+.icon-subtitle {
+    max-width: 50px;
+    margin-left: 10px;
+}
+
+.hr-about {
+    width: 80%;
+    height: 2px;
+    background-color: #ddd;
+    margin-bottom: 28px;
+}
+
+.about-description {
+    margin-left: 10px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-family: "SourceSans";
+    font-weight: bolder;
+    margin-bottom: 18px;
+    line-height: 1.4;
+}
+
+.left-panel {
+    grid-area: 1 / 1 / 2 / 2; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+}
+
+.center-panel {
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+.title-container, .title-skill-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 300px;
+    height: 850px;
+    background-color: #fff;
+    position: sticky;
+    margin-left: auto;
+    box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.34);
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.title-skills {
+    font-family: "Candal";
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+}
+
+.title-skill-container{
+    margin-bottom: 20px;
+}
+
+.skill-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-name {
+    font-family: "SourceSans";
+    border-bottom: 1px solid #eee;
+}
+
+.skill-img {
+    max-width: 30px;
+    margin-left: 20px;
+}
+
+.level-skill {
+    font-family: "Candal";
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+
+.skill-bar, .Javascript-level, .React-level, .Native-level, .Effects-level, .CSS3-level, .HTML-level, .Node-level, .Typescript-level, .Python-level, .Illustrator-level  {
+    width: 80%;
+    height: 3px;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.React-level, .HTML-level, .CSS3-level{
+    width: 90%;
+    background-color: #25B3E9;
+    animation: Level-90 2s ease-in-out 1;
+}
+
+.Node-level, .Typescript-level, .Javascript-level {
+    width: 80%;
+    background-color: #25B3E9;
+    animation: Level-80 2s ease-in-out 1;
+}
+
+.Native-level, .Illustrator-level {
+    width: 75%;
+    background-color: #25B3E9;
+    animation: Level-75 2s ease-in-out 1;
+}
+
+.Python-level {
+    width: 70%;
+    background-color: #25B3E9;
+    animation: Level-70 2s ease-in-out 1;
+}
+
+.Effects-level {
+    width: 65%;
+    background-color: #25B3E9;
+    animation: Level-65 2s ease-in-out 1;
+}
+
+@keyframes Level-80 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes Level-90 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes Level-75 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 75%;
+    }
+    
+}
+
+@keyframes Level-70 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 70%;
+    }
+}
+
+@keyframes Level-65 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 65%;
+    }
+}
+    
+@keyframes bubble {
+    0% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+    
+    50% {
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    100% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    .about-container {
+        flex-direction: column;
+        top: 50px;
+        padding: 10px;
+    }
+    .me-img {
+        width: 100px;
+        height: 100px;
+    }
+    .about-title {
+        font-size: 1em;
+        width: 100px;
+        text-align: center;
+    }
+    .about-subtitle {
+        font-size: .8em;
+        border-bottom: 1px solid #ddd;
+        border-radius: 0;
+    }
+    .about-description {
+        font-size: .7em;
+    }
+    .icon-subtitle {
+        width: 30px;
+    }
+    .img-container {
+        height: 200px;
+    }
+}
+
+
+
+
+@font-face {
+    font-family: "Candal";
+    src: url(../../Fonts/Candal-Regular.ttf);
+}
+
+@font-face {
+    font-family: "SourceSans";
+    src: url(../../Fonts/SourceSans3-Light.ttf);
+}
+

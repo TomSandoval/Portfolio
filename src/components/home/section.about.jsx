@@ -3,6 +3,7 @@ import aboutImage from "../../assets/Mesa de trabajo 1.png";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import { Link } from "react-router-dom";
 
 function SectionAbout() {
 
@@ -21,7 +22,7 @@ function SectionAbout() {
         at Henry Academy. If you want to know more about me, click the
         following button!
       </p>
-      <button className={style.aboutButton}>More about me!</button>
+      <Link to={"/about"} className={style.aboutButton}>More about me!</Link>
     </div>
     <picture className={style.imageContainer}>
       <img
