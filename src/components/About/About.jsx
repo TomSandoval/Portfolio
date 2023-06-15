@@ -320,20 +320,22 @@ export default function About() {
       </div>
       <div className="skills-container">
         <h2 className="title-skills">Skills</h2>
-        {skills.map((skill, index) => {
-          return (
-            <div className="skill-container" key={index}>
-              <div className="title-skill-container">
-                <h3 className="skill-name">{skill.name}</h3>
-                <img className="skill-img" src={skill.img} alt={skill.name} />
+        <div className="skills-content">
+          {skills.map((skill, index) => {
+            return (
+              <div className="skill-container" key={index}>
+                <div className="title-skill-container">
+                  <h3 className="skill-name">{skill.name}</h3>
+                  <img className="skill-img" src={skill.img} alt={skill.name} />
+                </div>
+                <p className="level-skill">{skill.level}%</p>
+                <div className="skill-bar">
+                  <div className={skill.name.split(".")[0] + "-level"}></div>
+                </div>
               </div>
-              <p className="level-skill">{skill.level}%</p>
-              <div className="skill-bar">
-                <div className={skill.name.split(".")[0] + "-level"}></div>
-              </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </section>
   );
