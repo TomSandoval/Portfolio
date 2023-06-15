@@ -296,6 +296,9 @@
         top: 50px;
         padding: 10px;
     }
+    .about-content {
+        max-width: 100%;
+    }
     .me-img {
         width: 100px;
         height: 100px;
@@ -310,14 +313,27 @@
         border-bottom: 1px solid #ddd;
         border-radius: 0;
     }
+
+    .about-subtitle:hover::after {
+        width: 0;
+    } 
+
     .about-description {
         font-size: .7em;
+        text-align: center;
     }
+
     .icon-subtitle {
         width: 30px;
     }
+
     .img-container {
         height: 200px;
+    }
+
+    .skills-container {
+        margin-left: 0;
+        margin-top: 30px;
     }
 }
 
