@@ -22,6 +22,7 @@ import Footer from "../footer/footer";
 export default function About() {
   const containerRef = useRef(null);
   const [anchoPantalla, setAnchoPantalla] = useState(window.innerWidth);
+  const [containerScroll, setContainerScroll] = useState(0);
   const [selectedOption, setSelectedOption] = useState("about-me");
   const [javascriptLevel, setJavascriptLevel] = useState(0);
   const [typescriptLevel, setTypescriptLevel] = useState(0);
@@ -93,36 +94,6 @@ export default function About() {
   ];
 
   useEffect(() => {
-    const container = containerRef.current;
-    const scrollWidth = container.scrollWidth;
-    const containerWidth = container.offsetWidth;
-
-
-    let startScroll;
-
- 
-
-    if (scrollWidth > containerWidth) {
-      const scrollAmount = scrollWidth - containerWidth;
-      let scrollPosition = 0;
-      let scrollDirection = 1;
-  
-      startScroll = function() {
-        scrollPosition += scrollSpeed * scrollDirection;
-  
-        if (scrollPosition >= scrollAmount) {
-          scrollPosition = 0; // Vuelve al principio
-          container.scrollLeft = scrollPosition;
-          requestAnimationFrame(startScroll); // Reinicia el desplazamiento
-        } else {
-          container.scrollLeft = scrollPosition;
-          requestAnimationFrame(startScroll);
-        }
-      };
-  
-      requestAnimationFrame(startScroll);
-    }
-
     const addLevel = setTimeout(() => {
       if (javascriptLevel < 80) {
         setJavascriptLevel(javascriptLevel + 1);
@@ -154,7 +125,7 @@ export default function About() {
       if (afterEffectsLevel < 65) {
         setAfterEffectsLevel(afterEffectsLevel + 1);
       }
-    }, 15);
+    }, 10);
 
     function actualizarAnchoPantalla() {
       setAnchoPantalla(window.innerWidth);
@@ -165,7 +136,6 @@ export default function About() {
     return () => {
       window.removeEventListener("resize", actualizarAnchoPantalla);
       clearTimeout(addLevel);
-      cancelAnimationFrame(startScroll);
     };
   }, [
     javascriptLevel,
@@ -177,6 +147,7 @@ export default function About() {
     pythonLevel,
     illustratorLevel,
     afterEffectsLevel,
+    containerScroll
   ]);
 
   useEffect(() => {

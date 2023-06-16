@@ -324,7 +324,18 @@
         padding: 12px;
     }
     .skills-content::-webkit-scrollbar {
-        height: 5px;
+        height: 10px;
+    }
+
+    .skills-content::-webkit-scrollbar-track {
+        background: #eeee;
+        width: 2px;
+    }
+
+    .skills-content::-webkit-scrollbar-thumb {
+        background: #25B3E9;
+        border-radius: 10px;
+        border: 2px solid #eeee;
     }
 
     .skill-container {
