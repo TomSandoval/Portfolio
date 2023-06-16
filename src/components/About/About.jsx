@@ -36,8 +36,8 @@ export default function About() {
   const [afterEffectsLevel, setAfterEffectsLevel] = useState(0);
 
 
-  const targetPosition = 500;
-  const duration = 1000;
+  const scrollSpeed = 2;
+  const scrollDirection = 1;
 
   const skills = [
     {
@@ -94,28 +94,34 @@ export default function About() {
 
   useEffect(() => {
     const container = containerRef.current;
-    const startPosition = container.scrollLeft;
-    const distance = targetPosition - startPosition;
-    const startTime = performance.now();
+    const scrollWidth = container.scrollWidth;
+    const containerWidth = container.offsetWidth;
 
-    function scroll(timestamp) {
-      const elapsed = timestamp - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const easing = easeOutQuad(progress);
-      const scrollValue = startPosition + distance * easing;
 
-      container.scrollLeft = scrollValue;
+    let startScroll;
 
-      if (elapsed < duration) {
-        requestAnimationFrame(scroll);
-      }
+ 
+
+    if (scrollWidth > containerWidth) {
+      const scrollAmount = scrollWidth - containerWidth;
+      let scrollPosition = 0;
+      let scrollDirection = 1;
+  
+      startScroll = function() {
+        scrollPosition += scrollSpeed * scrollDirection;
+  
+        if (scrollPosition >= scrollAmount) {
+          scrollPosition = 0; // Vuelve al principio
+          container.scrollLeft = scrollPosition;
+          requestAnimationFrame(startScroll); // Reinicia el desplazamiento
+        } else {
+          container.scrollLeft = scrollPosition;
+          requestAnimationFrame(startScroll);
+        }
+      };
+  
+      requestAnimationFrame(startScroll);
     }
-
-    function easeOutQuad(t) {
-      return t * (2 - t);
-    }
-
-    requestAnimationFrame(scroll);
 
     const addLevel = setTimeout(() => {
       if (javascriptLevel < 80) {
@@ -159,7 +165,7 @@ export default function About() {
     return () => {
       window.removeEventListener("resize", actualizarAnchoPantalla);
       clearTimeout(addLevel);
-      clearInterval(scrollIntervalId);
+      cancelAnimationFrame(startScroll);
     };
   }, [
     javascriptLevel,
@@ -182,31 +188,6 @@ export default function About() {
     setSelectedOption(e.target.value);
   };
 
-  const smoothScrollTo = (element, to, duration) => {
-    const start = element.scrollLeft;
-    const change = to - start;
-    const startTime = performance.now();
-
-    const animateScroll = (timestamp) => {
-      const elapsedTime = timestamp - startTime;
-      const easing = easeInOutQuad(elapsedTime, start, change, duration);
-
-      element.scrollLeft = easing;
-
-      if (elapsedTime < duration) {
-        requestAnimationFrame(animateScroll);
-      }
-    };
-
-    requestAnimationFrame(animateScroll);
-  };
-
-  const easeInOutQuad = (t, b, c, d) => {
-    t /= d / 2;
-    if (t < 1) return (c / 2) * t * t + b;
-    t--;
-    return (-c / 2) * (t * (t - 2) - 1) + b;
-  };
 
   return (
     <>
