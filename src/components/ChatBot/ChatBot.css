@@ -16,3 +16,9 @@
     z-index: 1000;
     transition: all 0.3s ease-in-out;
 }
+
+@media only screen and (max-width: 800px) {
+    .avatar-chat {
+        max-width: 60px;
+    }
+}
