@@ -13,12 +13,15 @@ import PythonLogo from "../../assets/Python.png";
 import IllustratorLogo from "../../assets/Illustrator.png";
 import AfterEffectsLogo from "../../assets/After Effects.png";
 import TypescriptLogo from "../../assets/Typescript.png";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useEffect } from "react";
 import Aos from "aos";
 import "animate.css";
+import Footer from "../footer/footer";
 
 export default function About() {
+  const containerRef = useRef(null);
+  const [anchoPantalla, setAnchoPantalla] = useState(window.innerWidth);
   const [selectedOption, setSelectedOption] = useState("about-me");
   const [javascriptLevel, setJavascriptLevel] = useState(0);
   const [typescriptLevel, setTypescriptLevel] = useState(0);
@@ -31,6 +34,10 @@ export default function About() {
 
   const [illustratorLevel, setIllustratorLevel] = useState(0);
   const [afterEffectsLevel, setAfterEffectsLevel] = useState(0);
+
+
+  const targetPosition = 500;
+  const duration = 1000;
 
   const skills = [
     {
@@ -86,6 +93,30 @@ export default function About() {
   ];
 
   useEffect(() => {
+    const container = containerRef.current;
+    const startPosition = container.scrollLeft;
+    const distance = targetPosition - startPosition;
+    const startTime = performance.now();
+
+    function scroll(timestamp) {
+      const elapsed = timestamp - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easing = easeOutQuad(progress);
+      const scrollValue = startPosition + distance * easing;
+
+      container.scrollLeft = scrollValue;
+
+      if (elapsed < duration) {
+        requestAnimationFrame(scroll);
+      }
+    }
+
+    function easeOutQuad(t) {
+      return t * (2 - t);
+    }
+
+    requestAnimationFrame(scroll);
+
     const addLevel = setTimeout(() => {
       if (javascriptLevel < 80) {
         setJavascriptLevel(javascriptLevel + 1);
@@ -119,8 +150,16 @@ export default function About() {
       }
     }, 15);
 
+    function actualizarAnchoPantalla() {
+      setAnchoPantalla(window.innerWidth);
+    }
+
+    window.addEventListener("resize", actualizarAnchoPantalla);
+
     return () => {
+      window.removeEventListener("resize", actualizarAnchoPantalla);
       clearTimeout(addLevel);
+      clearInterval(scrollIntervalId);
     };
   }, [
     javascriptLevel,
@@ -143,7 +182,34 @@ export default function About() {
     setSelectedOption(e.target.value);
   };
 
+  const smoothScrollTo = (element, to, duration) => {
+    const start = element.scrollLeft;
+    const change = to - start;
+    const startTime = performance.now();
+
+    const animateScroll = (timestamp) => {
+      const elapsedTime = timestamp - startTime;
+      const easing = easeInOutQuad(elapsedTime, start, change, duration);
+
+      element.scrollLeft = easing;
+
+      if (elapsedTime < duration) {
+        requestAnimationFrame(animateScroll);
+      }
+    };
+
+    requestAnimationFrame(animateScroll);
+  };
+
+  const easeInOutQuad = (t, b, c, d) => {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t + b;
+    t--;
+    return (-c / 2) * (t * (t - 2) - 1) + b;
+  };
+
   return (
+    <>
     <section className="about-container">
       <div className="about-content">
         <div className="left-panel">
@@ -320,7 +386,7 @@ export default function About() {
       </div>
       <div className="skills-container">
         <h2 className="title-skills">Skills</h2>
-        <div className="skills-content">
+        <div ref={containerRef} className="skills-content">
           {skills.map((skill, index) => {
             return (
               <div className="skill-container" key={index}>
@@ -338,5 +404,7 @@ export default function About() {
         </div>
       </div>
     </section>
+    <Footer/>
+    </>
   );
 }
