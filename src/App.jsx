@@ -6,6 +6,7 @@ import Avatar from './assets/Avatar chat.png';
 import { useState } from 'react'
 import Bot from './components/ChatBot/ChatBot';
 import About from './components/About/About';
+import Portfolio from './components/Portfolio/Portfolio';
 
 
 
@@ -20,7 +21,7 @@ function App() {
     <Routes>
       <Route path='/' element= {<Home></Home>}/>
       <Route path='/about'  element={<About/>}/>
-      <Route path='/portfolio'/>
+      <Route path='/portfolio' element={<Portfolio/>}/>
       <Route path='/contact'/>
     </Routes>
     </>
