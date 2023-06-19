@@ -14,12 +14,32 @@ function Bot() {
   };
 
 
+  const handleDownload = () => {
+    const fileURL = "/public/Resume+Sandoval.pdf";
+    const link = document.createElement("a");
+    link.href = fileURL;
+    link.download = "Resume Sandoval.pdf";
+    link.click();
+  }
+
   const handleEnd = ({ steps, values }) => {
-    console.log(values);
-    if (values[0] === 1) {
+    if (values[1] === 2) {
       setTimeout(() => {
         navigate("/about");
       }, 2000);
+    }
+    if (values[0] === 4) {
+      setTimeout(() => {
+        navigate("/portfolio");
+      }, 2000);
+    }
+    if (values[0] === 5) {
+      setTimeout(() => {
+        navigate("/contact");
+      }, 2000);
+    }
+    if (values[0] === 6) {
+      handleDownload();
     }
   }
 
@@ -42,6 +62,17 @@ function Bot() {
               id: "2",
               options: [
                 { value: 1, label: "I would like to get to know you better.", trigger: "3" },
+                { value: 4, label: "I would like to see your projects.", trigger: "8" },
+                {
+                  value: 5,
+                  label: "I would like to contact you.",
+                  trigger: "9",
+                },
+                {
+                  value: 6,
+                  label: "I would like to see your resume.",
+                  trigger: "10",
+                }
               ]
             },
             {
@@ -70,6 +101,21 @@ function Bot() {
               id: "7",
               message: "Ok, what else can I do for you?",
               trigger: "2"
+            },
+            {
+              id: "8",
+              message: "Let's go to the 'Portfolio' section!",
+              end: true,
+            },
+            {
+              id: "9",
+              message: "Let's go to the 'Contact' section!",
+              end: true,
+            },
+            {
+              id: "10",
+              message: "Sure, I'm downloading my resume on your device right now!",
+              end: true,
             }
           ]}
         />
