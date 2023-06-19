@@ -15,14 +15,14 @@ function Bot() {
 
 
   const handleDownload = () => {
-    const fileURL = "/public/Resume+Sandoval.pdf";
+    const fileURL = "/public/Resume Sandoval.pdf";
     const link = document.createElement("a");
     link.href = fileURL;
     link.download = "Resume Sandoval.pdf";
     link.click();
   }
 
-  const handleEnd = ({ steps, values }) => {
+  const handleEnd = ({ steps, values }) => { 
     if (values[1] === 2) {
       setTimeout(() => {
         navigate("/about");
