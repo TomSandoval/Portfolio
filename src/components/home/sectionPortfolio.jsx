@@ -3,6 +3,7 @@ import image from '../../assets/DisenioPortfolio.png'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function SectionPortfolio(){
 
@@ -18,7 +19,7 @@ export default function SectionPortfolio(){
           <p className={style.paragraph}>
           Check out my work, from basic landing pages to professional e-commerce sites built with market-leading technologies. I perform well working independently, but what I enjoy most is working with a team that shares the same passion for programming!
           </p>
-          <button className={style.aboutButton}>Check my works here!</button>
+          <Link to={"/portfolio"} className={style.aboutButton}>Check my works here!</Link>
         </div>
         <picture className={style.imageContainer}>
           <img
