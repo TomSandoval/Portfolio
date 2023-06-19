@@ -15,7 +15,7 @@ function Bot() {
 
 
   const handleDownload = () => {
-    const fileURL = "/public/Resume Sandoval.pdf";
+    const fileURL = "/Resume Sandoval.pdf";
     const link = document.createElement("a");
     link.href = fileURL;
     link.download = "Resume Sandoval.pdf";
