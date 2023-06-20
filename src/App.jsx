@@ -7,6 +7,7 @@ import { useState } from 'react'
 import Bot from './components/ChatBot/ChatBot';
 import About from './components/About/About';
 import Portfolio from './components/Portfolio/Portfolio';
+import Contact from './components/Contact/Contact';
 
 
 
@@ -22,7 +23,7 @@ function App() {
       <Route path='/' element= {<Home></Home>}/>
       <Route path='/about'  element={<About/>}/>
       <Route path='/portfolio' element={<Portfolio/>}/>
-      <Route path='/contact'/>
+      <Route path='/contact' element={<Contact/>}/>
     </Routes>
     </>
   )

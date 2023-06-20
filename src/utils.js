@@ -7,7 +7,7 @@ const projects = [
   {
     name: "This website!",
     description: "This website was built with React.js and CSS3. It features a contact form, a chatbot and a responsive design. It is hosted on Netlify and the contact form is powered by Formspree.",
-    technologies: ["React.js", "CSS3","Formspree", 'Brain.js'],
+    technologies: ["React.js", "CSS3","Formspree"],
     link: "https://tomassandoval.netlify.app/",
     image: portfolio,
     github: "https://github.com/TomSandoval/Portfolio",
