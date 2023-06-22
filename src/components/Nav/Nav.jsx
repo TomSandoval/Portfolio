@@ -33,21 +33,9 @@ function Nav() {
   ];
 
 
-  let language = JSON.parse(window.localStorage.getItem("leng"));
-  if (language === null) language = options[0];
   
   useEffect(() => {
 
-    let lang = window.localStorage.getItem("lang")
-    if (lang) {
-      console.log("entro");
-      i18n.changeLanguage(lang);
-      if(lang == "es") {
-        language = options[1]
-      } else {
-        language = options[0]
-      }
-    }
 
     function actualizarAnchoPantalla() {
       setAnchoPantalla(window.innerWidth);
@@ -86,12 +74,6 @@ function Nav() {
   
   const handleLaguage = (e) => {
     i18n.changeLanguage(e.value);
-    window.localStorage.setItem("lang", e.value)
-    if (e.value === "en") {
-      window.localStorage.setItem("leng", JSON.stringify(options[0]))
-    } else {
-      window.localStorage.setItem("leng", JSON.stringify(options[1]))
-    }
   };
   
   const customStyles = {
@@ -157,7 +139,7 @@ function Nav() {
             styles={customStyles}
             onChange={handleLaguage}
             isSearchable={false}
-            defaultValue={OptionWithImage((language))}
+            defaultValue={OptionWithImage((options[0]))}
             name="language"
             options={options.map((o) => OptionWithImage(o))}
           />
