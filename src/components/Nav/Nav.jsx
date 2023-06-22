@@ -32,13 +32,20 @@ function Nav() {
     { value: "es", label: "Español", imageSrc: spainFlag },
   ];
 
-  let lang = window.localStorage.getItem("leng");
+
+  let language = JSON.parse(window.localStorage.getItem("leng"));
+  if (language === null) language = options[0];
   
   useEffect(() => {
 
-    if (!!lang) {
-      const value = JSON.parse(lang);
-      i18n.changeLanguage(value.value)
+    let lang = window.localStorage.getItem("lang")
+    if (lang) {
+      i18n.changeLanguage(lang);
+      if(lang == "es") {
+        language = options[1]
+      } else {
+        language = options[0]
+      }
     }
 
     function actualizarAnchoPantalla() {
@@ -78,10 +85,11 @@ function Nav() {
   
   const handleLaguage = (e) => {
     i18n.changeLanguage(e.value);
-    if (e.value == "es") {
-      window.localStorage.setItem("leng", JSON.stringify(options[1]))
-    } else {
+    window.localStorage.setItem("lang", e.value)
+    if (e.value === "en") {
       window.localStorage.setItem("leng", JSON.stringify(options[0]))
+    } else {
+      window.localStorage.setItem("leng", JSON.stringify(options[1]))
     }
   };
   
@@ -148,7 +156,7 @@ function Nav() {
             styles={customStyles}
             onChange={handleLaguage}
             isSearchable={false}
-            defaultValue={lang ? OptionWithImage(JSON.parse(lang)) : OptionWithImage(options[0])}
+            defaultValue={OptionWithImage((language))}
             name="language"
             options={options.map((o) => OptionWithImage(o))}
           />
