@@ -4,8 +4,12 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export default function SectionPortfolio(){
+
+
+  const [t, i18n] = useTranslation("global")
 
     useEffect(()=>{
         Aos.init({duration: 1000})
@@ -15,11 +19,11 @@ export default function SectionPortfolio(){
         <section className={style.container} data-aos='fade-right'>
         <div className={style.skew}></div>
         <div className={style.textContainer}>
-          <h3 className={style.titleAbout}>Portfolio</h3>
+          <h3 className={style.titleAbout}>{t("home.portfolio-section.portfolio-section-title")}</h3>
           <p className={style.paragraph}>
-          Check out my work, from basic landing pages to professional e-commerce sites built with market-leading technologies. I perform well working independently, but what I enjoy most is working with a team that shares the same passion for programming!
+          {t("home.portfolio-section.portfolio-section-text")}
           </p>
-          <Link to={"/portfolio"} className={style.aboutButton}>Check my works here!</Link>
+          <Link to={"/portfolio"} className={style.aboutButton}>{t("home.portfolio-section.portfolio-section-button")}</Link>
         </div>
         <picture className={style.imageContainer}>
           <img

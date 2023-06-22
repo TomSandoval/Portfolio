@@ -4,8 +4,11 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function SectionAbout() {
+
+  const [t,i18n] = useTranslation("global")
 
   useEffect(()=>{
     Aos.init({duration: 1000})
@@ -14,15 +17,11 @@ function SectionAbout() {
   return (
     <section className={style.container} data-aos='fade-left'>
     <div className={style.textContainer}>
-      <h3 className={style.titleAbout}>About Me</h3>
+      <h3 className={style.titleAbout}>{t("home.about-me-section.about-me-section-title")}</h3>
       <p className={style.paragraph}>
-        Hi! I'm Tomás Sandoval, a full stack developer passionate about
-        designing and developing efficient and user-friendly web
-        applications. I live in Argentina and honed my skills as a developer
-        at Henry Academy. If you want to know more about me, click the
-        following button!
+        {t("home.about-me-section.about-me-section-text")}
       </p>
-      <Link to={"/about"} className={style.aboutButton}>More about me!</Link>
+      <Link to={"/about"} className={style.aboutButton}>{t("home.about-me-section.about-me-section-button")}</Link>
     </div>
     <picture className={style.imageContainer}>
       <img

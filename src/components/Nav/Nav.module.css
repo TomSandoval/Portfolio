@@ -39,7 +39,7 @@ body {
     letter-spacing: 1px;
     padding: 12px;
     border-radius: 1em;
-    transition: background .4s;
+    transition: background-color .4s;
 }
 
 .linkList:hover {
@@ -65,7 +65,8 @@ body {
 .containerMenu {
     transition: all .5s;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
     margin: 0;
     width: 50%;
@@ -75,6 +76,9 @@ body {
     position: fixed;
     z-index: 100;
 }
+
+
+
 
 @font-face {
     font-family: "CormorantSC";
@@ -118,7 +122,6 @@ body {
     }
 
     .listContainer {
-        height: 460px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -147,7 +150,8 @@ body {
     .containerMenuActive {
         transition: all .5s;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-evenly;
         align-items: center;
         margin: 0;
         width: 50%;
@@ -184,4 +188,34 @@ body {
         top: 50px;
     }
 
+    .languageContainer {
+        display: flex;
+        gap: 12px;
+    }
+
+    .buttonLanguage {
+        padding: 4px 8px;   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        background-color: #206FCA;
+        border: none;
+        color: #fff;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        border: 1px solid #fff;
+        border-radius: 15px;
+    }
+
+    .buttonLanguage:hover {
+        background-color: #1a5ca7;
+    }
+
+    .buttonLanguage:focus {
+        outline: none;
+    }
+
+    .flagMobile {
+        width: 20px;
+    }
 }

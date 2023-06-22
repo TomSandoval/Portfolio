@@ -1,0 +1,70 @@
+{
+
+    "navbar": {
+        "about-button": "Acerca de mí",
+        "portfolio-button": "Portfolio",
+        "contact-me-button": "Contacto"
+    },
+
+    "home": {
+        "welcome-message": "Hola!",
+        "welcome-iam": "Soy Tomás",
+        "about-me-section": {
+            "about-me-section-title": "Acerca de mí",
+            "about-me-section-text": "¡Hola! Soy Tomás Sandoval, un desarrollador full stack apasionado por diseñar y desarrollar aplicaciones web eficientes y fáciles de usar. Vivo en Argentina y perfeccioné mis habilidades como desarrollador en 'SoyHenry'. Si quieres saber más sobre mí, ¡haz clic en el siguiente botón!",
+            "about-me-section-button": "¡Más sobre mí!"
+        },
+        "portfolio-section": {
+            "portfolio-section-title": "Portfolio",
+            "portfolio-section-text": "Vea mi trabajo, desde páginas de destino básicas hasta sitios de comercio electrónico profesionales creados con tecnologías líderes en el mercado. Me desempeño bien trabajando de forma independiente, pero lo que más disfruto es trabajar con un equipo que comparte la misma pasión por la programación!",
+            "portfolio-section-button": "¡Mira mi trabajo aquí!"
+        },
+        "contact-me-section": {
+            "contact-me-section-title": "Contactame",
+            "contact-me-section-text": "Gracias por visitar mi portafolio! Si tienes alguna pregunta, comentario o simplemente quieres ponerte en contacto, no dudes en enviarme un mensaje. Siempre estoy abierto a discutir posibles oportunidades de trabajo, colaboraciones o proyectos interesantes. ¡Espero saber de ti pronto!"
+        }
+    },
+
+    "about-me-component": {
+        "options": {
+            "about-me": "Sobre mí",
+            "education": "Educación",
+            "history": "Mi historia con la programación",
+            "hobbies": "Hobbies"
+        },
+        "titles": {
+            "about-me": "Sobre mí",
+            "education": "Educación",
+            "history": "Mi historia con la programación",
+            "hobbies": "Hobbies"
+        },
+        "descriptions": {
+            "about-me": "¡Hola! Mi nombre es Tomás Sandoval, un apasionado desarrollador de software de 19 años de Buenos Aires, Argentina. Me especializo en el campo front-end, y aunque aún no tengo una amplia experiencia profesional, he tenido la oportunidad de trabajar en varios proyectos durante mi formación en la institución donde adquirí mis habilidades. Lo que más me emociona de mi trabajo es la necesidad constante de seguir aprendiendo. La industria del desarrollo de software evoluciona rápidamente y me encanta estar actualizado y adaptarme a los nuevos desafíos que se presentan. Para mí, el aprendizaje continuo es fundamental para brindar soluciones innovadoras y de alta calidad. Recientemente, tuve el orgullo de graduarme como desarrollador full-stack en 'SoyHenry', donde adquirí un conjunto sólido de habilidades técnicas y aprendí a desarrollar aplicaciones web completas, desde el frontend hasta el backend. En mi enfoque del trabajo, la curiosidad y el deseo continuo de aprender juegan un papel central. Siempre estoy buscando nuevas formas de mejorar mi código y encontrar soluciones creativas a los desafíos que enfrento. Creo firmemente que la mejor manera de crecer profesionalmente es mantener una mentalidad abierta y estar dispuesto a explorar nuevas tecnologías y metodologías.",
+            "education": {
+                "first": "Me formé como desarrollador full stack en SoyHenry, un bootcamp especializado en desarrollo web. Durante mi tiempo en SoyHenry, pude fortalecer y expandir mis habilidades de programación. No solo aprendí los fundamentos, sino que también tuve la oportunidad de aplicar mis conocimientos a proyectos sólidos y escalables, tanto en colaboración con otros desarrolladores como trabajando individualmente. El bootcamp en SoyHenry fue una experiencia transformadora. No solo me enseñaron a programar, sino que también me brindaron las herramientas para enfrentar los desafíos del mundo real en el campo del desarrollo web. Fue una oportunidad para adquirir experiencia práctica y sumergirme de lleno en el mundo de la programación.",
+                "second": "Agradezco esta gratificante experiencia que me impulsó a seguir creciendo en este vasto campo. Ademas de mi formación en SoyHenry, sigo educándome a través del autoaprendizaje. He realizado diversos cursos en áreas como diseño web, marketing digital y SEO, entre otros.",
+                "three" : "Creo firmemente en la importancia de permanecer y adquirir conocimientos en áreas complementarias al desarrollo. Esta mentalidad de aprendizaje constante me permite brindar soluciones más integrales y efectivas a los desafíos que enfrento en mi trabajo. Estoy emocionado de continuar con mi crecimiento profesional y colaborar en proyectos desafiantes. Si está interesado en trabajar juntos o tiene alguna pregunta, no dude en ponerse en contacto conmigo. ¡Espero tener la oportunidad de contribuir a tu proyecto!"
+            },
+            "history": {
+                "first": "Mi viaje de programación comenzó cuando tenía 16 años. Formé parte de una generación que creció junto a las computadoras y, a medida que me adentraba en el vasto mundo de Internet, mi curiosidad acerca de cómo se creaban los sitios web, las aplicaciones y las empresas enteras creció exponencialmente. Esto me llevó a dar mis primeros pasos en el campo de la programación y me sorprendió darme cuenta de que no se trata solo de líneas de código, es innovación, creatividad y soluciones. Es la puerta de entrada a un mundo de infinitas posibilidades. A los 17 años tomé la decisión de dedicar mi vida a este campo, y hasta el día de hoy sigo con esas ganas constantes de aprender y brindar soluciones al mundo.",
+                "second": "Todavía puedo recordar vívidamente mi primer 'Hello World!' :'D"
+            },
+            "hobbies": "Además de mi pasión por la programación, tengo varios hobbies que me apasionan. Disfruto leyendo libros de desarrollo personal, que me inspiran y me ayudan a crecer. También dedico tiempo al ejercicio físico para mantenerme en forma y cuidar mi salud. Además, el simRacing es otra de mis grandes pasiones, ya que me encanta la emoción de las carreras virtuales. Estos pasatiempos me permiten encontrar el equilibrio en mi vida y disfrutar de diferentes formas de creatividad y entretenimiento."
+        },
+        "skills-title": "Habilidades"
+    },
+    "contact-component": {
+        "contact-title": "Contacta conmigo!",
+        "label-email": "Email",
+        "label-message": "Mensaje",
+        "submit-button": "Enviar",
+        "message-alert": "Message sent!" 
+    },
+
+    "portfolio-component": {
+        "title": "Mis projectos!",
+        "see-project": "Visitar projecto",
+        "see-code": "Visitar código"
+    }
+
+}

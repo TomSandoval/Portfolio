@@ -1,0 +1,70 @@
+{
+
+    "navbar": {
+        "about-button": "About me",
+        "portfolio-button": "Portfolio",
+        "contact-me-button": "Contact Me"
+    },
+
+    "home": {
+        "welcome-message": "Hi!",
+        "welcome-iam": "I am Tomás",
+        "about-me-section": {
+            "about-me-section-title": "About Me",
+            "about-me-section-text": "Hi! I'm Tomás Sandoval, a full stack developer passionate about designing and developing efficient and user-friendly web applications. I live in Argentina and honed my skills as a developer at 'SoyHenry' . If you want to know more about me, click the following button!",
+            "about-me-section-button": "More about me!"
+        },
+        "portfolio-section": {
+            "portfolio-section-title": "Portfolio",
+            "portfolio-section-text": "Check out my work, from basic landing pages to professional e-commerce sites built with market-leading technologies. I perform well working independently, but what I enjoy most is working with a team that shares the same passion for programming!",
+            "portfolio-section-button": "Check my works here!"
+        },
+        "contact-me-section": {
+            "contact-me-section-title": "Contact Me",
+            "contact-me-section-text": "Thank you for visiting my portfolio! If you have any questions, comments or just want to get in touch, feel free to send me a message. I'm always open to discussing potential job opportunities, collaborations, or interesting projects. I hope to hear from you soon!"
+        }
+    },
+
+    "about-me-component": {
+        "options": {
+            "about-me": "About Me",
+            "education": "Education",
+            "history": "My history with programming",
+            "hobbies": "Hobbies"
+        },
+        "titles": {
+            "about-me": "About Me",
+            "education": "Education",
+            "history": "My history with programming",
+            "hobbies": "Hobbies"
+        },
+        "descriptions": {
+            "about-me": "Hello! My name is Tomás Sandoval, a passionate 19-year-old software developer from Buenos Aires, Argentina. I specialize in the front-end field, and although I don't have extensive professional experience yet, I have had the opportunity to work on various projects during my education at the institution where I acquired my skills. What excites me the most about my work is the constant need to keep learning. The software development industry evolves rapidly, and I love staying updated and adapting to the new challenges that arise. For me, continuous learning is essential to provide innovative and high-quality solutions. Recently, I had the pride of graduating as a full-stack developer from Henry Academy, where I acquired a solid set of technical skills and learned to develop complete web applications, from the frontend to the backend. In my approach to work, curiosity and a continuous desire to learn play a central role. I am always looking for new ways to improve my code and find creative solutions to the challenges I face. I firmly believe that the best way to grow professionally is to maintain an open mindset and be willing to explore new technologies and methodologies.",
+            "education": {
+                "first": "I trained as a full stack developer at SoyHenry, a web development specialized bootcamp. During my time at SoyHenry, I was able to strengthen and expand my programming skills. Not only did I learn the fundamentals, but I also had the opportunity to apply my knowledge to solid and scalable projects, both in collaboration with other developers and working individually. The bootcamp at SoyHenry was a transformative experience. Not only did they teach me how to program, but they also provided me with the tools to tackle real-world challenges in the web development field. It was an opportunity to gain practical experience and immerse myself fully in the world of programming.",
+                "second": "I am grateful for this rewarding experience  propelled me to continue growing in this vast field. In to my training at SoyHenry, I continue to educate myself through self-learning. I have taken various courses in areas such as web design, digital marketing and SEO, among others.",
+                "three" : "I firmly believe in the importance of staying and acquiring knowledge in complementary areas to  development. This mindset of constant learning allows me to provide more comprehensive and effective solutions to the challenges I face in my work. I am excited to continue my professional growth and collaborate on challenging projects. If you are interested in working together or have any questions, please feel free to contact me. I hope to have the opportunity to contribute to your project!"
+            },
+            "history": {
+                "first": " My programming journey began when I was 16 years old. I was part of a generation that grew up alongside computers, and as I delved into the vast world of the internet, my curiosity about how websites, applications, and entire businesses were created grew exponentially. This led me to take my first steps into the programming field, and it blew my mind to realize that it's not just lines of code—it's innovation, creativity, and solutions. It's the gateway to a world of infinite possibilities. At the age of 17, I made the decision to dedicate my life to this field, and to this day, I still have that constant desire to learn and provide solutions to the world.",
+                "second": "I can still vividly remember my first 'Hello World!' :'D"
+            },
+            "hobbies": "In addition to my passion for programming, I have several hobbies that I am passionate about. I enjoy reading personal development books, which inspire me and help me grow. I also dedicate time to physical exercise to stay fit and take care of my health. Furthermore, simRacing is another one of my great passions, as I love the thrill of virtual racing. These hobbies allow me to find balance in my life and enjoy different forms of creativity and entertainment."
+        },
+        "skills-title": "Skills"
+    },
+    "contact-component": {
+        "contact-title": "Contact with me!",
+        "label-email": "Email address",
+        "label-message": "Message",
+        "submit-button": "Submit",
+        "message-alert": "Message sent!" 
+    },
+
+    "portfolio-component": {
+        "title": "My projects!",
+        "see-project": "See project",
+        "see-code": "See code"
+    }
+
+}
