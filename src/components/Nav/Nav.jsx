@@ -40,6 +40,7 @@ function Nav() {
 
     let lang = window.localStorage.getItem("lang")
     if (lang) {
+      console.log("entro");
       i18n.changeLanguage(lang);
       if(lang == "es") {
         language = options[1]
@@ -167,6 +168,7 @@ function Nav() {
         {anchoPantalla <= 800 && (
           <div>
             <button
+              title="burger menu"
               className={menu ? style.movilButtonOpen : style.movilButton}
               onClick={toggleMenu}
               ref={buttonActive}
