@@ -36,7 +36,7 @@ function Nav() {
   
   useEffect(() => {
 
-    if (lang) {
+    if (!!lang) {
       const value = JSON.parse(lang);
       i18n.changeLanguage(value.value)
     }
@@ -77,7 +77,6 @@ function Nav() {
   }
   
   const handleLaguage = (e) => {
-    console.log(e.value);
     i18n.changeLanguage(e.value);
     if (e.value == "es") {
       window.localStorage.setItem("leng", JSON.stringify(options[1]))
