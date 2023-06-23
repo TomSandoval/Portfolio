@@ -219,3 +219,11 @@ body {
         width: 20px;
     }
 }
+
+
+@media only screen and (max-width: 400px) {
+    .languageContainer {
+        flex-direction: column;
+    }
+    
+}
