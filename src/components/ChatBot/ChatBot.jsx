@@ -140,7 +140,7 @@ function Bot() {
               id: "2",
               options: [
                 { value: 1, label: "Me gustaria conocerte mejor.", trigger: "3" },
-                { value: 4, label: "Me gustaria ver tus projectos.", trigger: "8" },
+                { value: 4, label: "Me gustaria ver tus proyectos.", trigger: "8" },
                 {
                   value: 5,
                   label: "Me gustaria contactarte.",

@@ -58,13 +58,13 @@
         "label-email": "Email",
         "label-message": "Mensaje",
         "submit-button": "Enviar",
-        "message-alert": "Message sent!" 
+        "message-alert": "Mensaje enviado!" 
     },
 
     "portfolio-component": {
-        "title": "Mis projectos!",
-        "see-project": "Visitar projecto",
-        "see-code": "Visitar código"
+        "title": "Mis proyectos!",
+        "see-project": "Visitar proyecto",
+        "see-code": "Código"
     }
 
 }
