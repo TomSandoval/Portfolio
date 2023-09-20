@@ -53,6 +53,15 @@ const projects_es = [
     active: true,
   },
   {
+    name: "Shoes shop",
+    description: "Shoes shop es una tienda online de zapatillas que cuenta con un sistema de gestion interno, automatiza tareas como gestion de stock, envio de email, control de compras, etc. Fue desarrollado con Next.js y utiliza MongoDB como base de datos, cuenta con autenticacion y autorizacion de usuarios por parte de Auth0",
+    technologies: ["Next.js", "MONGODB", "Auth0", "Three.js", "Sendgrid"],
+    link: "https://shoe-shop-five.vercel.app/",
+    image: shoesShop,
+    github: "https://github.com/TomSandoval/shoe-shop",
+    active: true,
+  },
+  {
     name: "TukiMarket",
     description: "TukiMarket es un sitio web de comercio electrónico construido con React.js y Express.js. Cuenta con una pasarela de pago segura, autorización de terceros, un panel de administración y gestión de archivos multimedia. Proporciona una experiencia de compra sin problemas y sirve como una solución integral para negocios en línea.",
     technologies: ["React.js", "Express.js", "Material-UI", "PostgreSQL", "Node.js"],
@@ -69,15 +78,6 @@ const projects_es = [
     image: carRental,
     github: "",
     active: false,
-  },
-  {
-    name: "Shoes shop",
-    description: "Shoes shop es una tienda online de zapatillas que cuenta con un sistema de gestion interno, automatiza tareas como gestion de stock, envio de email, control de compras, etc. Fue desarrollado con Next.js y utiliza MongoDB como base de datos, cuenta con autenticacion y autorizacion de usuarios por parte de Auth0",
-    technologies: ["Next.js", "MONGODB", "Auth0", "Three.js", "Sendgrid"],
-    link: "https://shoe-shop-five.vercel.app/",
-    image: shoesShop,
-    github: "https://github.com/TomSandoval/shoe-shop",
-    active: true,
   },
 ];
 
